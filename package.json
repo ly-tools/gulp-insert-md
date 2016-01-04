@@ -1,0 +1,36 @@
+{
+  "name": "gulp-insert-md",
+  "version": "0.0.1",
+  "description": "Insert custom content to markdown file",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test ./node_modules/.bin/_mocha --require should --reporter spec",
+    "test-cov": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
+    "test-travis": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
+  },
+  "author": "LingyuCoder",
+  "license": "MIT",
+  "devDependencies": {
+    "istanbul": "~0.4.0",
+    "mocha": "~2.3.3",
+    "should": "~7.1.1",
+    "run-gulp-task": "^0.1.1",
+    "pretty-error": "~2.0.0",
+    "gulp": "3.x.x",
+    "del": "^1.1.0"
+  },
+  "dependencies": {
+    "gulp-util": "~3.0.7",
+    "linglog": "0.0.4",
+    "lodash": "~3.10.1",
+    "through2": "~0.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LingyuCoder/gulp-insert-md"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/LingyuCoder/gulp-insert-md/issues"
+  }
+}
