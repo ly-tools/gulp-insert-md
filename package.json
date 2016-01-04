@@ -30,7 +30,13 @@
     "type": "git",
     "url": "https://github.com/LingyuCoder/gulp-insert-md"
   },
-  "keywords": [],
+  "keywords": [
+    "gulp",
+    "markdown",
+    "insert",
+    "replace",
+    "md"
+  ],
   "bugs": {
     "url": "https://github.com/LingyuCoder/gulp-insert-md/issues"
   },
