@@ -22,7 +22,7 @@ $ npm install --save-dev gulp-insert-md
 
 ### Gulpfile
 
-Define tasks in your gulpfile.
+Define tasks in your gulpfile
 
 ```javascript
 const gulp = require('gulp');
