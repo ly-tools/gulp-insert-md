@@ -13,6 +13,9 @@ module.exports = opts => {
     if (file.isStream()) return callback(new PluginError('gulp-insert-md', `Stream is not supported`));
     insert(file, opts)
       .then(() => callback(null, file))
-      .catch(e => callback(new PluginError('gulp-insert-md', e)));
+      .catch(e => {
+        console.error(e.message);
+        callback(new PluginError('gulp-insert-md', e));
+      });
   });
 };
