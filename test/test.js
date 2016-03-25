@@ -1,19 +1,22 @@
-'use strict';
-require('should');
-const path = require('path');
-const run = require('run-gulp-task');
-const PrettyError = require('pretty-error');
-const fs = require('fs');
+import 'babel-polyfill';
+import {
+  join
+} from 'path';
+import run from 'run-gulp-task';
+import PrettyError from 'pretty-error';
+import {
+  readFileSync
+} from 'fs';
 const pe = new PrettyError();
 const CWD = process.cwd();
-const testPath = path.join(CWD, 'test');
+const testPath = join(CWD, 'test');
 
 describe('gulp-insert-md', function() {
   describe('Oh my god! It works!!!', () => {
-    let casePath = path.join(testPath, 'case1');
+    let casePath = join(testPath, 'case1');
     before(done => {
       process.chdir(casePath);
-      run('default', path.join(process.cwd(), 'gulpfile.js'))
+      run('default', join(process.cwd(), 'gulpfile.js'))
         .catch(e => {
           console.log(pe.render(e));
           return e;
@@ -24,8 +27,8 @@ describe('gulp-insert-md', function() {
         });
     });
     it('It works! Unbelievable!', function() {
-      return fs.readFileSync(path.join(casePath, 'build', 'test.md'), 'utf-8').trim()
-        .should.be.eql(fs.readFileSync(path.join(casePath, 'expected', 'test.md'), 'utf-8').trim());
+      return readFileSync(join(casePath, 'build', 'test.md'), 'utf-8').trim()
+        .should.be.eql(readFileSync(join(casePath, 'expected', 'test.md'), 'utf-8').trim());
     });
   });
 });

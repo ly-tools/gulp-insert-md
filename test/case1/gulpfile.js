@@ -1,7 +1,6 @@
-'use strict';
-const gulp = require('gulp');
-const insert = require('../../index');
-const del = require('del');
+import gulp from 'gulp';
+import insert from '../../src/index';
+import del from 'del';
 
 gulp.task('clean', cb => del('build', cb));
 
@@ -14,4 +13,4 @@ gulp.task('default', ['clean'], () => {
     .pipe(gulp.dest('build'));
 });
 
-module.exports = gulp;
+module.exports = exports.default = gulp;

@@ -1,21 +1,23 @@
-'use strict';
+import through from 'through2';
+import insert from './main';
+import {
+  PluginError
+} from 'gulp-util';
+const DEFAULT_CONFIG = {};
 
-const _ = require('lodash');
-const through = require('through2');
-const DEFAULT_OPTS = {};
-const insert = require('./lib/index');
-const PluginError = require('gulp-util').PluginError;
-
-module.exports = opts => {
-  opts = _.defaults(opts || {}, DEFAULT_OPTS);
+export default function(config) {
+  config = {
+    ...DEFAULT_CONFIG,
+    ...config
+  };
   return through.obj((file, encoding, callback) => {
     if (file.isNull()) return callback(null, file);
     if (file.isStream()) return callback(new PluginError('gulp-insert-md', `Stream is not supported`));
-    insert(file, opts)
+    insert(file, config)
       .then(() => callback(null, file))
       .catch(e => {
-        console.error(e.message);
+        console.error(e.message, e.stack);
         callback(new PluginError('gulp-insert-md', e));
       });
   });
-};
+}

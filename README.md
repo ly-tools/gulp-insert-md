@@ -1,9 +1,9 @@
 # gulp-insert-md
 
-[![Test coverage](https://img.shields.io/coveralls/LingyuCoder/gulp-insert-md.svg?style=flat-square)](https://coveralls.io/r/LingyuCoder/gulp-insert-md?branch=master)
-[![Build Status](https://travis-ci.org/LingyuCoder/gulp-insert-md.png)](https://travis-ci.org/LingyuCoder/gulp-insert-md)
-[![Dependency Status](https://david-dm.org/LingyuCoder/gulp-insert-md.svg)](https://david-dm.org/LingyuCoder/gulp-insert-md)
-[![devDependency Status](https://david-dm.org/LingyuCoder/gulp-insert-md/dev-status.svg)](https://david-dm.org/LingyuCoder/gulp-insert-md#info=devDependencies)
+[![Test coverage](https://img.shields.io/coveralls/ly-tools/gulp-insert-md.svg?style=flat-square)](https://coveralls.io/r/ly-tools/gulp-insert-md?branch=master)
+[![Build Status](https://travis-ci.org/ly-tools/gulp-insert-md.png)](https://travis-ci.org/ly-tools/gulp-insert-md)
+[![Dependency Status](https://david-dm.org/ly-tools/gulp-insert-md.svg)](https://david-dm.org/ly-tools/gulp-insert-md)
+[![devDependency Status](https://david-dm.org/ly-tools/gulp-insert-md/dev-status.svg)](https://david-dm.org/ly-tools/gulp-insert-md#info=devDependencies)
 [![NPM version](http://img.shields.io/npm/v/gulp-insert-md.svg?style=flat-square)](http://npmjs.org/package/gulp-insert-md)
 [![node](https://img.shields.io/badge/node.js-%3E=_4.0-green.svg?style=flat-square)](http://nodejs.org/download/)
 [![License](http://img.shields.io/npm/l/gulp-insert-md.svg?style=flat-square)](LICENSE)
@@ -22,7 +22,6 @@ $ npm install --save-dev gulp-insert-md
 
 ### Gulpfile
 
-Define tasks in your gulpfile
 
 ```javascript
 const gulp = require('gulp');
@@ -91,8 +90,7 @@ console.log('test2');
 
 ```bash
 $ npm run test
-$ npm run test-cov
-$ npm run test-travis
+$ npm run travis
 ```
 
 ## License
