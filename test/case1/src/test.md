@@ -11,3 +11,6 @@ some old content here, will be replaced
 ---
 [insert]: # (end:test3.js)
 ---
+[insert]: # (start:test-3.js|grep|doc)
+[insert]: # (end:test-3.js)
+---

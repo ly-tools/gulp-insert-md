@@ -1,5 +1,9 @@
 # gulp-insert-md
 
+## 0.1.1
+
+* Allow file path with '-'
+
 ## 0.1.0
 
 * Rewrite with ES7

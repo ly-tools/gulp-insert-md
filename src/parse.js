@@ -2,8 +2,8 @@ import {
   dirname,
   join
 } from 'path';
-const RE_INSERT_G = /\[insert\]:\s*#\s*\((\w+):([\.\w\d\/]+)(?:\|([\w+\-\|]+))?\)/g;
-const RE_INSERT = /\[insert\]:\s*#\s*\((\w+):([\.\w\d\/]+)(?:\|([\w+\-\|]+))?\)/;
+const RE_INSERT_G = /\[insert\]:\s*#\s*\((\w+):([\.\w-\d\/]+)(?:\|([\w+\-\|]+))?\)/g;
+const RE_INSERT = /\[insert\]:\s*#\s*\((\w+):([\.\w-\d\/]+)(?:\|([\w+\-\|]+))?\)/;
 
 export default function(file) {
   let content = file.contents.toString();

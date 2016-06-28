@@ -1,6 +1,6 @@
 {
   "name": "gulp-insert-md",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Insert custom content to markdown file",
   "main": "lib/index.js",
   "scripts": {

@@ -23,3 +23,10 @@ console.log('test2');
 
 [insert]: # (end:test3.js)
 ---
+[insert]: # (start:test-3.js|grep|doc)
+doc
+grep
+'use strict';
+console.log('test-3');
+[insert]: # (end:test-3.js)
+---
